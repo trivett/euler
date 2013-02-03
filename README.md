@@ -1,4 +1,4 @@
 euler
 =====
 
-My Project Euler solutions
+My Project Euler solutions, mostly in Ruby.
