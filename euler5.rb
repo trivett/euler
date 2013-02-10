@@ -1,14 +1,19 @@
-#euler5.rb
+# 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
-group = Array.new
+# What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+nums = [11,12,13,14,15,16,17,18,19,20]
 
 
-x = 1
-while x < 1000000
-  x+=1
-  if  % 3 == 0 || x % 5 == 0
-    group << x
-  end
+puts "start"
+
+(200000000..250000000).each do |v|
+	is_divisible_by_all = true
+	nums.each do |num|
+		if v % num != 0
+			is_divisible_by_all = false
+		end
+	end
+	if is_divisible_by_all 
+		puts v
+	end
 end
-
-puts group.least
